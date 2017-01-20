@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <link href = "style.css" rel = "stylesheet">
+  <link rel = "stylesheet" href = "font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class = "container">
+  <input type = "radio" id = "article-work" name = "article">
+  <input type = "radio" id = "article-about" name = "article">
+  <input type = "radio" id = "article-contact" name = "article">
+  <input type = "radio" id = "back-home" name = "article">
+  <article id = "home" class = "container__panel">
+    <div class = "container__image"></div>
+    <div class = "container__content">
+      <header class = "container__vertical"><h1>Hiep Vo</h1>
+        <p>Ipsum feugiat lorem sed magna etiam adipiscing phasellus</p>
+      </header>
+      <nav>
+        <ul class = "container__ls-buttons container__vertical container__vertical-line">
+          <li tabindex="0"><label class = "container__button" for = "article-work">Work</label></li>
+          <li><label class = "container__button" for = "article-contact">Contact</label></li>
+          <li><label class = "container__button" for = "article-about">About</label></li>
+        </ul>
+      </nav>
+      <ul class = "container__ls-icons container__vertical">
+        <li><a href = "#" class = "container__icon fa-twitter"><span class = "container__label">Twitter</span></a></li>
+        <li><a href = "#" class = "container__icon fa-facebook"><span class = "container__label">Facebook</span></a>
+        </li>
+        <li><a href = "#" class = "container__icon fa-github"><span class = "container__label">GitHub</span></a></li>
+        <li><a href = "#" class = "container__icon fa-envelope"><span class = "container__label">Email</span></a></li>
+      </ul>
+    </div>
+  </article>
+  <article id = "work" class = "container__panel">
+    <div class = "container__image"></div>
+    <div class = "container__content">
+      <ul class = "container__actions">
+        <li tabindex="0"><label for="back-home" class = "container__button container__button--small container__back">Back</label></li>
+      </ul>
+      <header><h2>Work</h2>
+        <p>Magna feugiat lorem ipsum dolor<br> veroeros sed adipiscing</p>
+        <p>Lorem ipsum dolor sit amet, magna etiam adipiscing elit. Vivamus in quam eu turpis venenatis euismod eget ac
+          velit. Magna pharetra eleifend urna quis laoreet. Nullam quis urna iaculis metus ornare accumsan. Sed nunc
+          lacus, lobortis nec ante sit amet.</p>
+       </header>
+      </div>
+  </article>
+  <article id = "about" class = "container__panel">
+    <div class = "container__image"></div>
+    <div class = "container__content">
+      <ul class = "actions spinX">
+        <li><label for = "back-home" class = "container__button container__button--small container__back">Back</label></li>
+      </ul>
+        <header><h2>About</h2>
+          <p>Magna feugiat lorem ipsum dolor<br> veroeros sed adipiscing</p>
+        <p>Lorem ipsum dolor sit amet, magna etiam adipiscing elit. Vivamus in quam eu turpis venenatis euismod eget ac velit. Magna pharetra eleifend urna quis laoreet. Nullam quis urna iaculis metus ornare accumsan. Sed nunc
+          lacus, lobortis nec ante sit amet.</p>
+        </header>
+    </div>
+  </article>
+  <article id = "contact" class = "container__panel">
+    <div class = "container__image"></div>
+    <div class = "container__content">
+      <ul class = "actions spinX">
+        <li><label for = "back-home" class = "container__button container__button--small container__back">Back</label></li>
+      </ul>
+      <div class = "inner">
+        <header><h2>Contact</h2></header>
+        <form method = "post" action = "#">
+          <div class = "field half first"><label for = "name">Name</label><input name = "name" id = "name"
+                                                                                 type = "text"></div>
+          <div class = "field half"><label for = "email">Email</label><input name = "email" id = "email" type = "text">
+          </div>
+          <div class = "field"><label for = "message">Message</label><textarea name = "message" id = "message"
+                                                                               rows = "5"></textarea></div>
+          <ul class = "actions">
+            <li><a href = "" class = "button submit">Send Message</a></li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </article>
+</div>
+</body>
+</html>

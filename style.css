@@ -1,0 +1,636 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Lato|Slabo+27px|Josefin+Slab:400,700);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.55;
+  background: #ECF0F1;
+  color: #2C3E50;
+  font-weight: 400;
+  font-family: "Josefin Slab", Helvetica, sans-serif;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+footer, header, nav {
+  display: block;
+}
+
+article {
+  position: absolute;
+}
+
+header {
+  margin: 1rem 2rem;
+}
+
+header > *:first-child::after {
+  background-color: #193441;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 12rem;
+  margin: 2rem 0;
+}
+
+header > h1:first-child::after {
+  margin: 2rem auto;
+}
+
+header p, header ~ p {
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+  padding-top: 2rem;
+}
+
+h1, h2 {
+  color: #2C3E50;
+  font-family: "Josefin Slab", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+ul {
+  list-style: none;
+}
+
+li, input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 0;
+}
+
+article#work, article#about, article#contact {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  width: 100%;
+}
+
+.container__ls-buttons {
+  cursor: default;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.container__ls-buttons li {
+  display: inline-block;
+  margin: 1rem 0 0 1rem;
+  width: 15rem;
+  padding-left: 0;
+  vertical-align: middle;
+  font-size: 1.6rem;
+}
+
+ul.container__actions {
+  padding-left: 2rem;
+}
+
+.container__actions li {
+  display: inline-block;
+  padding-left: 0;
+  width: 15rem;
+  vertical-align: middle;
+  font-size: 1.6rem;
+}
+
+.container__ls-buttons li:last-of-type {
+  padding-right: 0;
+}
+
+.container__vertical {
+  text-align: center;
+}
+
+.container__vertical li {
+  display: block;
+  margin: 0.5rem;
+  padding: 1.5rem 0 0;
+  position: relative;
+}
+
+.container__vertical li:first-of-type {
+  padding-top: 0;
+}
+
+.container__vertical-line li::after {
+  background-color: #3E606F;
+  content: "";
+  display: block;
+  height: 2.5rem;
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  width: 1px;
+}
+
+.container__vertical-line li:last-of-type::after {
+  display: none;
+}
+
+.container__ls-buttons li, .container__actions li {
+  perspective: 1000px;
+}
+
+.container__ls-buttons li label {
+  -webkit-transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
+  -moz-transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
+  transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
+}
+
+ul.container__actions li label {
+  -webkit-transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
+  -moz-transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
+  transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
+
+}
+
+/********* Icons **********/
+.container__ls-icons {
+  cursor: default;
+  padding-left: 0;
+}
+
+.container__ls-icons li {
+  display: inline-block;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  width: 3.5rem;
+}
+
+.container__icon::before {
+  font-size: 2.25rem;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease 0s, border-bottom-color 0.2s ease 0s;
+}
+
+.container__icon > .container__label {
+  display: none;
+}
+
+/*--------- set hover color for icons ------------*/
+a:hover {
+  border-bottom-color: transparent;
+  color: #2980B9;
+}
+
+/********Buttons*********/
+.container__button {
+  border: 0;
+  border-radius: 8px;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0.2rem 2rem;
+  box-shadow: 0 0 0 1px #3E606F inset;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 0.25rem;
+  width: 15rem;
+  text-transform: uppercase;
+}
+
+.container__button--small {
+  font-size: 1.2rem;
+  width: 12rem;
+  padding: 0.2rem 5rem;
+}
+
+/* ---- back button ----*/
+.container__back::before {
+  background-image: url("images/back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  height: inherit;
+  left: 2rem;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.2s ease 0s;
+  width: 2rem;
+}
+
+.container__back::after {
+  background-image: url("images/back-blue.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  height: inherit;
+  left: 2rem;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.2s ease 0s;
+  vertical-align: middle;
+  width: 2rem;
+}
+
+.container__back:hover::before {
+  opacity: 0;
+}
+
+.container__back:hover::after {
+  opacity: 1;
+}
+
+/*width of buttons*/
+.container__vertical li > .container__button {
+  min-width: 15rem;
+}
+
+/*set color & border for button when hover */
+.container__button:hover {
+  box-shadow: 0 0 0 1px #2980B9 inset;
+  color: #2980B9;
+}
+
+/*****************/
+
+.container__vertical-line {
+  text-align: center;
+}
+
+.container__panel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  -webkit-transition: opacity 0.5s ease 0s, transform 0.5s ease 0s, height 0.5s ease 0s;
+  -moz-transition: opacity 0.5s ease 0s, transform 0.5s ease 0s, height 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s, transform 0.5s ease 0s, height 0.5s ease 0s;
+}
+
+.container__panel {
+  min-height: 62rem;
+}
+
+.container__panel > .container__image {
+  border: 0;
+  display: inline-block;
+  position: relative;
+  border-radius: 0;
+  width: 45%;
+  z-index: 1;
+  min-height: 35rem;
+  -webkit-transition: transform 0.5s ease 0s;
+  -moz-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+}
+
+#home .container__image {
+  background: #3E606F url("images/pic") no-repeat center;
+  background-size: cover;
+}
+
+#work .container__image {
+  background: #3E606F url("images/pic") no-repeat center;
+  background-size: cover;
+}
+
+.container__panel > .container__content {
+  background-color: #DDE5E7;
+  padding-top: 5rem;
+  width: 45%;
+  -webkit-transition: transform 0.5s ease 0s;
+  -moz-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+}
+
+/* click on buttons on home page it'll be spin */
+ul.container__ls-buttons li:focus > label {
+  background-color: rgba(93, 14, 14, 0.05);
+  -moz-animation: spinY 0.2s ease 10;
+  -webkit-animation: spinY 0.2s ease 10;
+  animation: spinY 0.2s ease 10;
+}
+
+/* spin action for back button */
+ul.container__actions li:focus > label {
+  background-color: rgba(93, 14, 14, 0.05);
+  -webkit-animation: spinX 0.2s ease 10;
+  -moz-animation: spinX 0.2s ease 10;
+  animation: spinX 0.2s ease 10;
+}
+
+/* ---------hidden input------------*/
+
+input#article-work:checked ~ #work {
+  display: inline-flex;
+  -webkit-animation: fadeIn 1s ease;
+  -moz-animation: fadeIn 1s ease;
+  animation: fadeIn 1s ease;
+}
+
+input#article-work:checked ~ #home,
+input#article-about:checked ~ #home,
+input#article-contact:checked ~ #home {
+  -webkit-animation: fadeOut-Scale 1s ease;
+  -moz-animation: fadeOut-Scale 1s ease;
+  animation: fadeOut-Scale 1s ease;
+}
+
+input#article-about:checked ~ #about {
+  display: inline-flex;
+}
+
+input#article-contact:checked ~ #contact {
+  display: inline-flex;
+}
+
+input#back-home:checked ~ #work,
+input#back-home:checked ~ #contact
+input#back-home:checked ~ #about {
+  display: inline-flex;
+  -webkit-animation: fadeOut-Scale 1s ease;
+  -moz-animation: fadeOut-Scale 1s ease;
+  animation: fadeOut-Scale 1s ease;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+}
+
+input#back-home:checked ~ #home {
+  display: inline-flex;
+  -webkit-animation: fadeIn 1s ease;
+  -moz-animation: fadeIn 1s ease;
+  animation: fadeIn 1s ease;
+}
+
+/*-------- keyframes -------------*/
+
+/*-----For home page buttons----*/
+
+@-moz-keyframes spinY {
+  from {
+    -moz-transform: rotateY(0deg);
+  }
+  to {
+    -moz-transform: rotateY(480deg);
+  }
+}
+
+@-webkit-keyframes spinY {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(480deg);
+  }
+}
+
+@keyframes spinY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-480deg);
+  }
+}
+
+/* for back button */
+@-moz-keyframes spinX {
+  from {
+    -moz-transform: rotateX(0deg);
+  }
+  to {
+    -moz-transform: rotateX(-480deg);
+  }
+}
+
+@-webkit-keyframes spinX {
+  from {
+    -webkit-transform: rotateX(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(-480deg);
+  }
+}
+
+@keyframes spinX {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-480deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    transform: scale(0.95);
+    opacity: 0;
+    opacity: 1 \9; /* IE9 only */
+  }
+  66% {
+    visibility: hidden;
+    transform: scale(0.95);
+    opacity: 0;
+    opacity: 1 \9; /* IE9 only */
+  }
+  100% {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    transform: scale(0.99);
+    opacity: 0;
+    opacity: 1 \9; /* IE9 only */
+  }
+  66% {
+    visibility: hidden;
+    transform: scale(0.99);
+    opacity: 0;
+    opacity: 1 \9; /* IE9 only */
+  }
+  100% {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    transform: scale(0.99);
+    opacity: 0;
+    opacity: 1 \9; /* IE9 only */
+  }
+  66% {
+    visibility: hidden;
+    transform: scale(0.99);
+    opacity: 0;
+    opacity: 1 \9; /* IE9 only */
+  }
+  100% {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*
+@-webkit-keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}*/
+
+@-webkit-keyframes fadeOut-Scale {
+  0% {
+    visibility: visible;
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  66% {
+    visibility: visible;
+    -webkit-transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut-Scale {
+  0% {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+  66% {
+    visibility: visible;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut-Scale {
+  0% {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+  66% {
+    visibility: visible;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+/*--------------------------------*/
+
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 3rem;
+  }
+
+  .container__image {
+    min-height: 35rem;
+  }
+}
+
