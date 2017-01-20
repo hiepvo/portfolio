@@ -88,9 +88,6 @@ article#work, article#about, article#contact {
 .container {
   display: flex;
   flex-direction: column;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  perspective: 1000px;
   width: 100%;
 }
 
@@ -356,7 +353,6 @@ a:hover {
 
 /* click on buttons on home page it'll be spin */
 ul.container__ls-buttons li:focus > label {
-  background-color: rgba(93, 14, 14, 0.05);
   -moz-animation: spinY 0.2s ease 10;
   -webkit-animation: spinY 0.2s ease 10;
   animation: spinY 0.2s ease 10;
@@ -364,7 +360,6 @@ ul.container__ls-buttons li:focus > label {
 
 /* spin action for back button */
 ul.container__actions li:focus > label {
-  background-color: rgba(93, 14, 14, 0.05);
   -webkit-animation: spinX 0.2s ease 10;
   -moz-animation: spinX 0.2s ease 10;
   animation: spinX 0.2s ease 10;
