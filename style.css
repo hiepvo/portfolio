@@ -88,6 +88,8 @@ article#work, article#about, article#contact {
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding-top: 2rem;
   width: 100%;
 }
 
@@ -143,7 +145,7 @@ ul.container__actions {
 .container__vertical li {
   display: block;
   margin: 0.5rem;
-  padding: 1.5rem 0 0;
+  padding-top: 1.5rem;
   position: relative;
 }
 
@@ -171,15 +173,15 @@ ul.container__actions {
 }
 
 .container__ls-buttons li label {
-  -webkit-transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
-  -moz-transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
-  transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
+  -webkit-transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease 0s;
+  -moz-transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease 0s;
+  transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease 0s;
 }
 
 ul.container__actions li label {
-  -webkit-transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
-  -moz-transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
-  transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease-in 0s;
+  -webkit-transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease 0s;
+  -moz-transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease 0s;
+  transition: background-color 0.2s ease 0s, color 0.2s ease 0s, transform 0.5s ease 0s;
 
 }
 
@@ -529,45 +531,16 @@ input#back-home:checked ~ #home {
   }
 }
 
-/*
-@-webkit-keyframes fadeOut {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes fadeOut {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}*/
-
 @-webkit-keyframes fadeOut-Scale {
   0% {
     visibility: visible;
     -webkit-transform: scale(1);
     opacity: 1;
+  }
+  33% {
+    visibility: visible;
+    transform: scale(0.9);
+    opacity: 0;
   }
   66% {
     visibility: visible;
@@ -587,6 +560,11 @@ input#back-home:checked ~ #home {
     transform: scale(1);
     opacity: 1;
   }
+  33% {
+    visibility: visible;
+    transform: scale(0.9);
+    opacity: 0;
+  }
   66% {
     visibility: visible;
     transform: scale(0.9);
@@ -605,6 +583,11 @@ input#back-home:checked ~ #home {
     transform: scale(1);
     opacity: 1;
   }
+  33% {
+    visibility: visible;
+    transform: scale(0.9);
+    opacity: 0;
+  }
   66% {
     visibility: visible;
     transform: scale(0.9);
@@ -616,16 +599,3 @@ input#back-home:checked ~ #home {
     opacity: 0;
   }
 }
-
-/*--------------------------------*/
-
-@media screen and (max-width: 1280px) {
-  .container {
-    padding: 3rem;
-  }
-
-  .container__image {
-    min-height: 35rem;
-  }
-}
-
