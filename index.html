@@ -6,14 +6,18 @@
   <title>Portfolio</title>
   <link href = "style.css" rel = "stylesheet">
   <link rel = "stylesheet" href = "font-awesome-4.7.0/css/font-awesome.min.css">
-  <link href='//fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet'>
+  <link href = '//fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel = 'stylesheet'>
 </head>
 <body>
 <div class = "container">
-  <input type = "radio" id = "article-work" name = "article">
+  <input type = "radio" id = "article-projects" name = "article">
+  <input type = "radio" id = "article-skills" name = "article">
   <input type = "radio" id = "article-about" name = "article">
   <input type = "radio" id = "article-contact" name = "article">
-  <input type = "radio" id = "back-home" name = "article">
+  <input type = "radio" id = "back-home-projects" name = "article">
+  <input type = "radio" id = "back-home-skills" name = "article">
+  <input type = "radio" id = "back-home-contact" name = "article">
+  <input type = "radio" id = "back-home-about" name = "article">
   <article id = "home" class = "container__panel">
     <div class = "container__image"></div>
     <div class = "container__content">
@@ -22,12 +26,14 @@
       </header>
       <nav>
         <ul class = "container__ls-buttons container__vertical container__vertical-line">
-          <li tabindex="0"><label class = "container__button" for = "article-work">Work</label></li>
-          <li><label class = "container__button" for = "article-contact">Contact</label></li>
-          <li><label class = "container__button" for = "article-about">About</label></li>
+          <li tabindex = "0"><label class = "container__button" for = "article-projects">Projects</label></li>
+          <li tabindex = "0"><label class = "container__button" for = "article-skills">Skills</label></li>
+          <li tabindex = "0"><label class = "container__button" for = "article-contact">Contact</label></li>
+          <li tabindex = "0"><label class = "container__button" for = "article-about">About</label></li>
         </ul>
       </nav>
       <ul class = "container__ls-icons container__vertical">
+        <li><a href = "#" class = "container__icon fa-search"><span class = "container__label">Search</span></a></li>
         <li><a href = "#" class = "container__icon fa-twitter"><span class = "container__label">Twitter</span></a></li>
         <li><a href = "#" class = "container__icon fa-facebook"><span class = "container__label">Facebook</span></a>
         </li>
@@ -36,41 +42,94 @@
       </ul>
     </div>
   </article>
-  <article id = "work" class = "container__panel">
-    <div class = "container__image"></div>
+  <article id = "projects" class = "container__panel">
     <div class = "container__content">
       <ul class = "container__actions">
-        <li tabindex="0"><label for="back-home" class = "container__button container__button--small container__back">Back</label></li>
+        <li class = "container__actions--left" tabindex = "0"><label for = "back-home-projects"
+                                                                     class = "container__button container__button--small container__back">Back</label>
+        </li>
+        <li class = "container__actions--middle"><h2>Projects</h2></li>
       </ul>
-      <header><h2>Work</h2>
-        <p>Magna feugiat lorem ipsum dolor<br> veroeros sed adipiscing</p>
-        <p>Lorem ipsum dolor sit amet, magna etiam adipiscing elit. Vivamus in quam eu turpis venenatis euismod eget ac
-          velit. Magna pharetra eleifend urna quis laoreet. Nullam quis urna iaculis metus ornare accumsan. Sed nunc
-          lacus, lobortis nec ante sit amet.</p>
-       </header>
+      <div class = "tabs">
+        <section>
+          <input type = "radio" name = "sections" id = "calc" checked>
+          <label for = "calc">Real Calculator</label>
+          <article>
+
+          </article>
+        </section>
+        <section>
+          <input type = "radio" name = "sections" id = "component">
+          <label for = "component">Non-JS UI Components</label>
+          <article>
+
+          </article>
+        </section>
+        <section>
+          <input type = "radio" name = "sections" id = "other-projects">
+          <label for = "projects">Other Projects</label>
+          <article>
+
+          </article>
+        </section>
+        <section>
+          <input type = "radio" name = "sections" id = "forms">
+          <label for = "forms">Forms</label>
+          <article>
+
+          </article>
+        </section>
+        <section>
+          <input type = "radio" name = "sections" id = "web-component">
+          <label for = "web-component">Web Component</label>
+          <article>
+
+          </article>
+        </section>
+        <section>
+          <input type = "radio" name = "sections" id = "cart">
+          <label for = "cart">Shopping Cart</label>
+          <article>
+
+          </article>
+        </section>
       </div>
+    </div>
+  </article>
+  <article id = "skills" class = "container__panel">
+    <div class = "container__content">
+      <ul class = "container__actions">
+        <li class = "container__actions--left" tabindex = "0"><label for = "back-home-skills"
+                                                                     class = "container__button container__button--small container__back">Back</label>
+        </li>
+        <li class = "container__actions--middle"><h2>Skills</h2></li>
+      </ul>
+    </div>
   </article>
   <article id = "about" class = "container__panel">
     <div class = "container__image"></div>
     <div class = "container__content">
-      <ul class = "actions spinX">
-        <li><label for = "back-home" class = "container__button container__button--small container__back">Back</label></li>
+      <ul class = "container__actions">
+        <li tabindex = "0"><label for = "back-home-about"
+                                  class = "container__button container__button--small container__back">Back</label></li>
       </ul>
-        <header><h2>About</h2>
-          <p>Magna feugiat lorem ipsum dolor<br> veroeros sed adipiscing</p>
-        <p>Lorem ipsum dolor sit amet, magna etiam adipiscing elit. Vivamus in quam eu turpis venenatis euismod eget ac velit. Magna pharetra eleifend urna quis laoreet. Nullam quis urna iaculis metus ornare accumsan. Sed nunc
+      <header><h2>About</h2>
+        <p>Magna feugiat lorem ipsum dolor<br> veroeros sed adipiscing</p>
+        <p>Lorem ipsum dolor sit amet, magna etiam adipiscing elit. Vivamus in quam eu turpis venenatis euismod eget ac
+          velit. Magna pharetra eleifend urna quis laoreet. Nullam quis urna iaculis metus ornare accumsan. Sed nunc
           lacus, lobortis nec ante sit amet.</p>
-        </header>
+      </header>
     </div>
   </article>
   <article id = "contact" class = "container__panel">
     <div class = "container__image"></div>
     <div class = "container__content">
-      <ul class = "actions spinX">
-        <li><label for = "back-home" class = "container__button container__button--small container__back">Back</label></li>
+      <ul class = "container__actions">
+        <li tabindex = "0"><label for = "back-home-contact"
+                                  class = "container__button container__button--small container__back">Back</label></li>
       </ul>
-      <div class = "inner">
-        <header><h2>Contact</h2></header>
+      <header><h2>Contact</h2></header>
+      <div class = "container__contact-form">
         <form method = "post" action = "#">
           <div class = "field half first"><label for = "name">Name</label><input name = "name" id = "name"
                                                                                  type = "text"></div>
@@ -78,8 +137,8 @@
           </div>
           <div class = "field"><label for = "message">Message</label><textarea name = "message" id = "message"
                                                                                rows = "5"></textarea></div>
-          <ul class = "actions">
-            <li><a href = "" class = "button submit">Send Message</a></li>
+          <ul class = "container__actions">
+            <li><a class="container__button" href = "#" >Send</a></li>
           </ul>
         </form>
       </div>
