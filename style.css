@@ -299,26 +299,28 @@ a:hover {
 }
 
 #home .container__image {
-  -webkit-animation: moveRight linear 1s;
-  -o-animation: moveRight linear 1s;
-  animation: moveRight linear 1s;
+  -webkit-animation: moveRight ease 1s;
+  -o-animation: moveRight ease 1s;
+  animation: moveRight ease 1s;
 
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   -o-animation-delay: 0.5s;
   animation-delay: 0.5s;
+
   z-index: 5;
 }
 
 #home .container__content {
-  -webkit-animation: moveLeft linear 1s;
-  -o-animation: moveLeft linear 1s;
-  animation: moveLeft linear 1s;
+  -webkit-animation: moveLeft ease 1s;
+  -o-animation: moveLeft ease 1s;
+  animation: moveLeft ease 1s;
 
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   -o-animation-delay: 0.5s;
   animation-delay: 0.5s;
+
   z-index: -5;
 }
 
@@ -356,8 +358,6 @@ ul.container__actions li:focus > label {
   padding-top: 4rem;
 }
 
-#contact .container__content {
-}
 
 article#home, article#projects, article#skills, article#about, article#contact {
   -webkit-transition: transform 0.5s, opacity 0.5s;
@@ -372,14 +372,14 @@ article#home {
   z-index: 1;
   position: absolute;
 
-  -webkit-animation: fadeIn linear 1s;
-  -o-animation: fadeIn linear 1s;
-  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  animation: fadeIn ease 1s;
 }
 
 article#projects, article#skills, article#about, article#contact {
-  opacity: 0;
   position: absolute;
+  opacity: 0;
 }
 
 /* ---------Projects------------*/
@@ -394,6 +394,7 @@ input#article-about:checked ~ #about,
 input#article-contact:checked ~ #contact {
   opacity: 1;
   z-index: 1;
+
   -webkit-transition-delay: 0.7s;
   -moz-transition-delay: 0.7s;
   -ms-transition-delay: 0.7s;
@@ -415,18 +416,18 @@ input#article-contact:checked ~ #home {
   transform: scale(0.95);
 }
 
-/*-------- About -----------*/
+/*-------- About & Contact -----------*/
 
 #about .container__image,
 #about .container__content,
 #contact .container__image,
 #contact .container__content {
   opacity: 0;
-  -webkit-transition: transform 0.5s, opacity 0.5s linear;
-  -moz-transition: transform 0.5s, opacity 0.5s linear;
-  -ms-transition: transform 0.5s, opacity 0.5s linear;
-  -o-transition: transform 0.5s, opacity 0.5s linear;
-  transition: transform 0.5s, opacity 0.5s linear;
+  -webkit-transition: transform 0.5s, opacity 0.5s ease;
+  -moz-transition: transform 0.5s, opacity 0.5s ease;
+  -ms-transition: transform 0.5s, opacity 0.5s ease;
+  -o-transition: transform 0.5s, opacity 0.5s ease;
+  transition: transform 0.5s, opacity 0.5s ease;
 
   -webkit-transition-delay: 0.7s;
   -moz-transition-delay: 0.7s;
@@ -464,12 +465,18 @@ input#back-home-contact:checked ~ #contact .container__image {
 input#back-home-about:checked ~ #home,
 input#back-home-contact:checked ~ #home {
   opacity: 1;
-  z-index: 1;
   -webkit-transition: transform 0.5s, opacity 0.5s;
   -moz-transition: transform 0.5s, opacity 0.5s;
   -ms-transition: transform 0.5s, opacity 0.5s;
   -o-transition: transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s;
+
+  -webkit-transition-delay: 0.7s;
+  -moz-transition-delay: 0.7s;
+  -ms-transition-delay: 0.7s;
+  -o-transition-delay: 0.7s;
+  transition-delay: 0.7s;
+
 }
 
 input#back-home-about:checked ~ #about,
@@ -492,8 +499,6 @@ input#back-home-contact:checked ~ #contact .container__content {
   transition: transform 0.5s, opacity 0.5s;
 }
 
-/*-------- Contact ---------*/
-
 /* ------- Back Button ----------*/
 input#back-home-projects:checked ~ #projects,
 input#back-home-skills:checked ~ #skills,
@@ -511,13 +516,17 @@ input#back-home-skills:checked ~ #home,
 input#back-home-about:checked ~ #home,
 input#back-home-contact:checked ~ #home {
   opacity: 1;
+  -webkit-transition: transform 0.5s, opacity 0.5s;
+  -moz-transition: transform 0.5s, opacity 0.5s;
+  -ms-transition: transform 0.5s, opacity 0.5s;
+  -o-transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
 
   -webkit-transition-delay: 0.7s;
   -moz-transition-delay: 0.7s;
   -ms-transition-delay: 0.7s;
   -o-transition-delay: 0.7s;
   transition-delay: 0.7s;
-
 }
 
 /*-------- keyframes -------------*/
@@ -762,4 +771,10 @@ form .field.half {
 form .field {
   clear: both;
   margin: 0 0 1em;
+}
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
