@@ -64,35 +64,35 @@
 
   var ShowProjects = function(){
     document.removeEventListener(transitionEnd, ShowProjects);
-    removeClass(projects, 'hide');
-    addClass(home, 'hide');
+    setTimeout(function(){ removeClass(projects, 'hide'); }, 400);
+    setTimeout(function(){ addClass(home, 'hide'); }, 400);
   };
 
   var ShowSKills = function(){
     document.removeEventListener(transitionEnd, ShowSKills);
-    removeClass(skills, 'hide');
-    addClass(home, 'hide');
+    setTimeout(function(){ removeClass(skills, 'hide'); }, 400);
+    setTimeout(function(){ addClass(home, 'hide'); }, 400);
   };
 
   var ShowContact = function(){
     document.removeEventListener(transitionEnd, ShowContact);
-    removeClass(contact, 'hide');
-    addClass(home, 'hide');
+    setTimeout(function(){ removeClass(contact, 'hide'); }, 400);
+    setTimeout(function(){ addClass(home, 'hide'); }, 400);
   };
 
   var ShowAbout = function(){
     document.removeEventListener(transitionEnd, ShowAbout);
-    removeClass(about, 'hide');
-    addClass(home, 'hide');
+    setTimeout(function(){ removeClass(about, 'hide'); }, 400);
+    setTimeout(function(){ addClass(home, 'hide'); }, 400);
   };
 
   var ShowHome = function(){
     document.removeEventListener(transitionEnd, ShowHome);
-    removeClass(home, 'hide');
-    addClass(projects, 'hide');
-    addClass(skills, 'hide');
-    addClass(contact, 'hide');
-    addClass(about, 'hide');
+    setTimeout(function(){ removeClass(home, 'hide'); }, 400);
+    setTimeout(function(){ addClass(skills, 'hide');}, 400);
+    setTimeout(function(){ addClass(projects, 'hide');}, 400);
+    setTimeout(function(){ addClass(contact, 'hide');}, 400);
+    setTimeout(function(){ addClass(about, 'hide'); }, 400);
   };
 
   function transitionEndEventName(){
