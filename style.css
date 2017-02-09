@@ -68,8 +68,14 @@ button:focus {
 }
 
 header p {
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   line-height: 2.8rem;
+}
+
+#footer {
+  position: absolute;
+  left: 61rem;
+  top: 66rem;
 }
 
 /********* Icons **********/
@@ -100,6 +106,12 @@ a {
 }
 
 a:hover {
+  border-bottom-color: transparent;
+  color: #2980B9;
+}
+
+.wrapper__icons li label:hover {
+  cursor: pointer;
   border-bottom-color: transparent;
   color: #2980B9;
 }
@@ -159,17 +171,16 @@ ul.wrapper__buttons--spinX li {
 }
 
 ul.wrapper__buttons--spinX li label {
-  -webkit-transition: transform 0.5s ease-in 0s;
-  -moz-transition: transform 0.5s ease-in 0s;
-  -ms-transition: transform 0.5s ease-in 0s;
-  transition: transform 0.5s ease-in 0s;
+  -webkit-transition: transform 0.7s 0s;
+  -moz-transition: transform 0.7s 0s;
+  transition: transform 0.7s 0s;
+
 }
 
 ul.wrapper__buttons--spinY li label {
-  -webkit-transition: transform 0.5s ease-in 0s;
-  -moz-transition: transform 0.5s ease-in 0s;
-  -ms-transition: transform 0.5s ease-in 0s;
-  transition: transform 0.5s ease-in 0s;
+  -webkit-transition: transform 0.7s 0s;
+  -moz-transition: transform 0.7s 0s;
+  transition: transform 0.7s 0s;
 }
 
 /* click on buttons on home page it'll be spin */
@@ -235,7 +246,6 @@ article#home {
 
   -webkit-transition: transform 0.7s, opacity 0.7s;
   -moz-transition: transform 0.7s, opacity 0.7s;
-  -ms-transition: transform 0.7s, opacity 0.7s;
   transition: transform 0.7s, opacity 0.7s;
 
 }
@@ -280,22 +290,12 @@ article#projects, article#skills, article#about, article#contact {
   opacity: 0;
   -webkit-transition: transform 0.7s, opacity 0.7s;
   -moz-transition: transform 0.7s, opacity 0.7s;
-  -ms-transition: transform 0.7s, opacity 0.7s;
   transition: transform 0.7s, opacity 0.7s;
 
   -webkit-transition-delay: 0.7s;
   -moz-transition-delay: 0.7s;
-  -ms-transition-delay: 0.7s;
   transition-delay: 0.7s;
 
-}
-
-article#projects, article#skills, article#about, article#contact {
-
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
 }
 
 /*----------------------------*/
@@ -305,7 +305,7 @@ article#projects, article#skills, article#about, article#contact {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 97vh;
   font-size: 2rem;
   line-height: 1;
   background: #ECF0F1;
@@ -340,6 +340,21 @@ article#projects, article#skills, article#about, article#contact {
   width: 45%;
 }
 
+#projects,
+#skills {
+  opacity: 0;
+
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+
+  -webkit-transition: transform 1s 1s, opacity 1s 1s;
+  -moz-transition: transform 1s 1s, opacity 1s 1s;
+  transition: transform 1s 1s, opacity 1s 1s;
+
+}
+
 input#article-projects:checked ~ #projects,
 input#article-skills:checked ~ #skills,
 input#article-about:checked ~ #about,
@@ -351,6 +366,11 @@ input#article-contact:checked ~ #contact {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+
+  -webkit-transition: transform 1s 1s, opacity 1s 1s;
+  -moz-transition: transform 1s 1s, opacity 1s 1s;
+  transition: transform 1s 1s, opacity 1s 1s;
+
 }
 
 input#article-projects:checked ~ #home,
@@ -358,17 +378,10 @@ input#article-skills:checked ~ #home,
 input#article-about:checked ~ #home,
 input#article-contact:checked ~ #home {
   opacity: 0;
-
   -webkit-transform: scale(0.95);
   -moz-transform: scale(0.95);
   -ms-transform: scale(0.95);
   transform: scale(0.95);
-
-  -webkit-transition-delay: 0.3s;
-  -moz-transition-delay: 0.3s;
-  -ms-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-
 }
 
 /*-------- About & Contact -----------*/
@@ -378,23 +391,23 @@ input#article-contact:checked ~ #home {
 #contact .wrapper__image,
 #contact .wrapper__content {
   opacity: 0;
-  -webkit-transition: transform 0.7s, opacity 0.7s ease;
-  -moz-transition: transform 0.7s, opacity 0.7s ease;
-  -ms-transition: transform 0.7s, opacity 0.7s ease;
-  transition: transform 0.7s, opacity 0.7s ease;
 
-  -webkit-transition-delay: 0.7s;
-  -moz-transition-delay: 0.7s;
-  -ms-transition-delay: 0.7s;
-  transition-delay: 0.7s;
-
+  -webkit-transition: transform 1s 1s, opacity 1s 1s;
+  -moz-transition: transform 1s 1s, opacity 1s 1s;
+  transition: transform 1s 1s, opacity 1s 1s;
 }
 
 #about .wrapper__image, #contact .wrapper__image {
+  opacity: 0;
+  -webkit-transform: translateY(2rem);
+  -moz-transform: translateY(2rem);
   transform: translateY(2rem);
 }
 
 #about .wrapper__content, #contact .wrapper__content {
+  opacity: 0;
+  -webkit-transform: translateY(-2rem);
+  -moz-transform: translateY(-2rem);
   transform: translateY(-2rem);
 }
 
@@ -406,50 +419,14 @@ input#article-contact:checked ~ #contact .wrapper__image {
   transform: translateY(0);
 }
 
-input#back-home-about:checked ~ #about .wrapper__content,
-input#back-home-contact:checked ~ #contact .wrapper__content {
-  transform: translateY(-2rem);
-}
-
-input#back-home-about:checked ~ #about .wrapper__image,
-input#back-home-contact:checked ~ #contact .wrapper__image {
-  transform: translateY(2rem);
-}
-
-input#back-home-about:checked ~ #home,
-input#back-home-contact:checked ~ #home {
-  opacity: 1;
-}
-
-input#back-home-about:checked ~ #about,
-input#back-home-contact:checked ~ #contact {
-
-  -webkit-transition: transform 0.7s, opacity 0.7s;
-  -moz-transition: transform 0.7s, opacity 0.7s;
-  -ms-transition: transform 0.7s, opacity 0.7s;
-  transition: transform 0.7s, opacity 0.7s;
-
-  /*--- this delay need to be larger than wrapper__image & wrapper__content delay---- */
-  -webkit-transition-delay: 0.7s;
-  -moz-transition-delay: 0.7s;
-  -ms-transition-delay: 0.7s;
-  transition-delay: 0.7s;
-
-}
-
 input#back-home-about:checked ~ #about .wrapper__image,
 input#back-home-about:checked ~ #about .wrapper__content,
 input#back-home-contact:checked ~ #contact .wrapper__image,
 input#back-home-contact:checked ~ #contact .wrapper__content {
+
   -webkit-transition: transform 0.7s, opacity 0.7s;
   -moz-transition: transform 0.7s, opacity 0.7s;
-  -ms-transition: transform 0.7s, opacity 0.7s;
   transition: transform 0.7s, opacity 0.7s;
-
-  -webkit-transition-delay: 0.3s;
-  -moz-transition-delay: 0.3s;
-  -ms-transition-delay: 0.3s;
-  transition-delay: 0.3s;
 
 }
 
@@ -457,17 +434,15 @@ input#back-home-contact:checked ~ #contact .wrapper__content {
 
 input#back-home-skills:checked ~ #skills,
 input#back-home-projects:checked ~ #projects {
-  opacity: 0;
+
+  -webkit-transition: transform 1s, opacity 1s;
+  -moz-transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
 
   -webkit-transform: scale(0.95);
   -moz-transform: scale(0.95);
   -ms-transform: scale(0.95);
   transform: scale(0.95);
-
-  -webkit-transition-delay: 0.3s;
-  -moz-transition-delay: 0.3s;
-  -ms-transition-delay: 0.3s;
-  transition-delay: 0.3s;
 
 }
 
@@ -655,7 +630,8 @@ input#back-home-projects:checked ~ #projects {
 
 [data-tooltip]:before,
 [data-tooltip]:after {
-  visibility: hidden;
+
+
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -703,7 +679,7 @@ input#back-home-projects:checked ~ #projects {
 /* Show tooltip content on hover */
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
-  visibility: visible;
+
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
@@ -986,12 +962,9 @@ input#back-home-skills:checked ~ #home,
 input#back-home-about:checked ~ #home,
 input#back-home-contact:checked ~ #home {
   opacity: 1;
-
-  -webkit-transition-delay: 0.7s;
-  -moz-transition-delay: 0.7s;
-  -ms-transition-delay: 0.7s;
-  -o-transition-delay: 0.7s;
-  transition-delay: 0.7s;
+  -webkit-transition: transform 1s 1s, opacity 1s 1s;
+  -moz-transition: transform 1s 1s, opacity 1s 1s;
+  transition: transform 1s 1s, opacity 1s 1s;
 }
 
 /*------------------------*/
@@ -1166,8 +1139,8 @@ input#back-home-contact:checked ~ #home {
 
 #about .wrapper__content label#bizCard {
   height: 37.5rem;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   transform-style: preserve-3d;
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -1184,6 +1157,8 @@ input#back-home-contact:checked ~ #home {
   max-width: 50rem;
   height: 37.5rem;
   padding-left: 1rem;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
   transition: transform 1s;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -1237,7 +1212,6 @@ input[type="checkbox"] {
 }
 
 #bizCard [type="checkbox"]:checked + .card {
-  transform: rotateX(180deg);
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
   transform: rotateX(180deg);
@@ -1280,7 +1254,7 @@ input[type="checkbox"] {
   text-align: left;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  letter-spacing: 0.2px;
+  letter-spacing: 1px;
   color: #8595a7;
 }
 
@@ -1437,12 +1411,12 @@ input[type="checkbox"] {
 
   #about > .wrapper__image,
   #contact > .wrapper__image {
-    transform: translateX(1.5rem);
+    transform: translateX(2rem);
   }
 
   #about > .wrapper__content,
   #contact > .wrapper__content {
-    transform: translateX(-1.5rem);
+    transform: translateX(-2rem);
   }
 
   input#back-home-about:checked ~ #about .wrapper__content,
@@ -1468,11 +1442,7 @@ input[type="checkbox"] {
     display: block;
     text-align: center;
   }
-  /*
-    .flex-col1 .xAxis, .flex-col2 .xAxis {
-      padding-left: 7.3rem;
-    }
-  */
+
   .flex-col1, .flex-col2, .flex-col3 {
     width: 100%;
     margin: 0;

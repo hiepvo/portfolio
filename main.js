@@ -2,14 +2,14 @@
  * Created by hiepvo on 1/24/17.
  */
 (function(){
-  var init = {}
+  var init = {};
 
   var home = document.getElementById('home');
 
   var projects = document.getElementById('projects');
-  var skills  = document.getElementById('skills');
-  var about   = document.getElementById('about');
-  var contact = document.getElementById('contact');
+  var skills   = document.getElementById('skills');
+  var about    = document.getElementById('about');
+  var contact  = document.getElementById('contact');
 
   var inputProject = document.getElementById('article-projects');
   var inputSkills  = document.getElementById('article-skills');
@@ -20,80 +20,114 @@
   var backHome_skills   = document.getElementById('back-home-skills');
   var backHome_contact  = document.getElementById('back-home-contact');
   var backHome_about    = document.getElementById('back-home-about');
-  var transitionEnd     = transitionEndEventName();
+
+  var search        = document.getElementById('search');
+  var searchOverlay = document.getElementById('overlay');
+  var popupClick    = document.getElementById('popupClick');
+  var popup1        = document.getElementById('popup1');
+
+  var transitionEnd = transitionEndEventName();
+
+  search.addEventListener('click', function(event){
+    var checkbox = event.target;
+    if(checkbox.checked){
+      show(searchOverlay, 0);
+    }
+    else{
+      hide(searchOverlay, 500);
+    }
+  });
+
+  popupClick.addEventListener('click', function(){
+    popup1.style.display = 'block';
+  });
 
   backHome_projects.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowHome, false);
-  })
+  });
 
   backHome_skills.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowHome, false);
-  })
+  });
 
   backHome_contact.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowHome, false);
-  })
+  });
 
   backHome_about.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowHome, false);
-  })
+  });
 
   inputProject.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowProjects, false);
-  })
+  });
 
   inputSkills.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowSKills, false);
-  })
+  });
 
   inputContact.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowContact, false);
-  })
+  });
 
   inputAbout.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowAbout, false);
-  })
+  });
 
   var ShowProjects = function(){
     document.removeEventListener(transitionEnd, ShowProjects);
-    setTimeout(function(){ removeClass(projects, 'hide'); }, 400);
-    setTimeout(function(){ addClass(home, 'hide'); }, 400);
+    show(projects, 500);
+    hide(home, 500);
   };
 
   var ShowSKills = function(){
     document.removeEventListener(transitionEnd, ShowSKills);
-    setTimeout(function(){ removeClass(skills, 'hide'); }, 400);
-    setTimeout(function(){ addClass(home, 'hide'); }, 400);
+    show(skills, 500);
+    hide(home, 500);
   };
 
   var ShowContact = function(){
     document.removeEventListener(transitionEnd, ShowContact);
-    setTimeout(function(){ removeClass(contact, 'hide'); }, 400);
-    setTimeout(function(){ addClass(home, 'hide'); }, 400);
+    show(contact, 500);
+    hide(home, 500);
   };
 
   var ShowAbout = function(){
     document.removeEventListener(transitionEnd, ShowAbout);
-    setTimeout(function(){ removeClass(about, 'hide'); }, 400);
-    setTimeout(function(){ addClass(home, 'hide'); }, 400);
+    show(about, 500);
+    hide(home, 500);
+
   };
 
   var ShowHome = function(){
     document.removeEventListener(transitionEnd, ShowHome);
-    setTimeout(function(){ removeClass(home, 'hide'); }, 400);
-    setTimeout(function(){ addClass(skills, 'hide');}, 400);
-    setTimeout(function(){ addClass(projects, 'hide');}, 400);
-    setTimeout(function(){ addClass(contact, 'hide');}, 400);
-    setTimeout(function(){ addClass(about, 'hide'); }, 400);
+
+    show(home, 500);
+    hide(skills, 500);
+    hide(projects, 500);
+    hide(contact, 500);
+    hide(about, 500);
   };
+
+  function hide(el, time){
+    setTimeout(function(){
+      addClass(el, 'hide');
+    }, time);
+  }
+
+  function show(el, time){
+    setTimeout(function(){
+      removeClass(el, 'hide');
+    }, time);
+  }
 
   function transitionEndEventName(){
     var i,
@@ -115,22 +149,22 @@
 
   function hasClass(el, className){
     if(el.classList)
-      return el.classList.contains(className)
+      return el.classList.contains(className);
     else
-      return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
+      return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
   }
 
   function addClass(el, className){
     if(el.classList)
-      el.classList.add(className)
+      el.classList.add(className);
     else if(!hasClass(el, className)) el.className += " " + className
   }
 
   function removeClass(el, className){
     if(el.classList)
-      el.classList.remove(className)
+      el.classList.remove(className);
     else if(hasClass(el, className)){
-      var reg      = new RegExp('(\\s|^)' + className + '(\\s|$)')
+      var reg      = new RegExp('(\\s|^)' + className + '(\\s|$)');
       el.className = el.className.replace(reg, ' ')
     }
   }
@@ -139,5 +173,5 @@
 
   window.init = init;
 
-})(window)
+})(window);
 

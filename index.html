@@ -7,7 +7,7 @@
   <link href = "style.css" rel = "stylesheet">
   <link rel = "stylesheet" href = "font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel = "stylesheet" href = "fonts.css">
-
+  <link rel = "stylesheet" href = "search.css">
 </head>
 <body>
 <div class = "wrapper">
@@ -19,6 +19,8 @@
   <input type = "radio" id = "back-home-skills" name = "article">
   <input type = "radio" id = "back-home-contact" name = "article">
   <input type = "radio" id = "back-home-about" name = "article">
+  <input type = "checkbox" id = "search">
+  <input type = "checkbox" id = "popupClick">
 
   <article id = "home" class = "wrapper__panel">
     <div class = "wrapper__image"></div>
@@ -34,7 +36,7 @@
         <li tabindex = "0"><label class = "wrapper__button" for = "article-about">About</label></li>
       </ul>
       <ul class = "wrapper__icons wrapper__vertical">
-        <li><a href = "#" class = "wrapper__icon fa-search"></a></li>
+        <li><label for = "search" class = "wrapper__icon fa-search search"></label></li>
         <li><a href = "#" class = "wrapper__icon fa-twitter"></a></li>
         <li><a href = "https://www.linkedin.com/in/hiep-vo-0867b143" class = "wrapper__icon fa-linkedin"></a>
         </li>
@@ -256,6 +258,20 @@ ydyrdy
       </div>
     </div>
   </article>
+  <div id = "overlay" class = "hide overlay overlay-hugeinc">
+    <label for = "search" class = "fa fa-times"></label>
+    <div id = "search-form">
+      <input type = "text" value = "" placeholder = "Search..." id = "search-input"><label
+        class = "fa fa-search search-icon" for = "popupClick"></label>
+    </div>
+  </div>
+  <div id = "popup1" class = "popup">
+    <h2>...Sorry!</h2>
+    <a class = "close fa fa-times" href = ""></a>
+    <div class = "content">
+      <p>Search Temporarily Disabled ;(</p>
+    </div>
+  </div>
 </div>
 <script src = "main.js"></script>
 </body>
