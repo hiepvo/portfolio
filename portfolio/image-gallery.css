@@ -1,0 +1,58 @@
+
+
+.gallery-container {
+  position: relative;
+  margin: auto 0;
+  width: 100%;
+  padding-top: 10rem;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.gallery-container [type="radio"] {
+  display: none;
+}
+
+.gallery-container label {
+  margin: 1px 0 0 7px;
+  width: 15rem;
+  height: 10rem;
+  float: left;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.gallery-container label img {
+  position: absolute;
+  display: inline-block;
+  padding-left: 2rem;
+}
+
+/* add the hover effects*/
+.gallery-container [type="radio"] + label:hover {
+  opacity: 1;
+}
+
+/* add the click effects*/
+.gallery-container [type="radio"]:checked + label {
+  opacity: 1;
+}
+
+.gallery-container > img {
+  position: absolute;
+  left: 1.8rem;
+  z-index: -1;
+  height: 50rem;
+  width: 80rem;
+  opacity: 0;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  -webkit-transition: opacity 1.2s;
+  -moz-transition: opacity 1.2s;
+  transition: opacity 1.2s;
+}
+
+/* when radio checked, we will show the corresponding image*/
+.gallery-container [type="radio"]:checked + label + img {
+  opacity: 1;
+}
