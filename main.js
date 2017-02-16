@@ -26,7 +26,45 @@
   var popupClick    = document.getElementById('popupClick');
   var popup1        = document.getElementById('popup1');
 
+  var calc          = document.getElementById('calc');
+  var component     = document.getElementById('component');
+  var forms         = document.getElementById('forms');
+  var cart  = document.getElementById('cart');
+
+  var tabCalc          = document.getElementById('tabCalc');
+  var tabComponent     = document.getElementById('tabComponent');
+  var tabForms         = document.getElementById('tabForms');
+  var tabCart  = document.getElementById('tabCart');
+
   var transitionEnd = transitionEndEventName();
+
+  calc.addEventListener('click', function(){
+    show(tabCalc, 0);
+    hide(tabComponent, 500);
+    hide(tabForms, 500);
+    hide(tabCart, 500);
+  });
+
+  component.addEventListener('click', function(){
+    show(tabComponent, 0);
+    hide(tabCalc, 500);
+    hide(tabForms, 500);
+    hide(tabCart, 500);
+  });
+
+  forms.addEventListener('click', function(){
+    show(tabForms, 0);
+    hide(tabComponent, 500);
+    hide(tabCalc, 500);
+    hide(tabCart, 500);
+  });
+
+  cart.addEventListener('click', function(){
+    show(tabCart, 0);
+    hide(tabComponent, 500);
+    hide(tabCalc, 500);
+    hide(tabForms, 500);
+  });
 
   search.addEventListener('click', function(event){
     var checkbox = event.target;

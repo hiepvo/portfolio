@@ -8,6 +8,10 @@
   <link rel = "stylesheet" href = "font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel = "stylesheet" href = "fonts.css">
   <link rel = "stylesheet" href = "search.css">
+  <link rel = "stylesheet" href = "carousel.css">
+  <link rel = "stylesheet" type = "text/css" href = "calculator.css"/>
+  <link rel = "stylesheet" type = "text/css" href = "accordion-menu.css"/>
+  <link rel = "stylesheet" type = "text/css" href = "image-gallery.css"/>
 </head>
 <body>
 <div class = "wrapper">
@@ -38,64 +42,274 @@
       <ul class = "wrapper__icons wrapper__vertical">
         <li><label for = "search" class = "wrapper__icon fa-search search"></label></li>
         <li><a href = "#" class = "wrapper__icon fa-twitter"></a></li>
-        <li><a href = "https://www.linkedin.com/in/hiep-vo-0867b143" class = "wrapper__icon fa-linkedin"></a>
-        </li>
-        <li><a href = "#" class = "wrapper__icon fa-github"></a></li>
+        <li><a href = "https://www.linkedin.com/in/hiep-vo-0867b143/" class = "wrapper__icon fa-linkedin"></a></li>
+        <li><a href = "https://github.com/hiepvo" class = "wrapper__icon fa-github"></a></li>
         <li><a href = "#" class = "wrapper__icon fa-envelope"></a></li>
       </ul>
     </div>
+
   </article>
   <article id = "projects" class = "wrapper__panel hide">
     <div class = "wrapper__content">
       <ul class = "wrapper__buttons--spinX">
         <li tabindex = "0"><label for = "back-home-projects"
-                                                                     class = "wrapper__button wrapper__button--small wrapper__back">Back</label>
+                                  class = "wrapper__button wrapper__button--small wrapper__back">Back</label>
         </li>
         <li><h2>Projects</h2></li>
       </ul>
       <div class = "tabs">
-        <section>
-          <input type = "radio" name = "sections" id = "calc" checked>
-          <label for = "calc">Real Calculator</label>
-          <article>
-ydyrdy
-          </article>
-        </section>
-        <section>
-          <input type = "radio" name = "sections" id = "component">
-          <label for = "component">Non-JS UI Components</label>
-          <article>
+        <ul>
+          <li>
+            <input type = "radio" name = "sections" id = "calc" checked = "checked">
+            <label class = "tab-item" for = "calc">Real Calculator</label>
+            <div id = "tabCalc" class = "carousel">
+              <input type = "radio" name = "carousel-item" id = "item-1" checked = "checked"
+                     class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/calc1.png"/>
+                <label for = "item-4" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "item-2" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "item-1"></label>
+              <input type = "radio" name = "carousel-item" id = "item-2" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/calc2.png"/>
+                <label for = "item-1" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "item-3" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "item-2"></label>
+              <input type = "radio" name = "carousel-item" id = "item-3" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <span>Now, You can try the demo in next slide</span>
+                <label for = "item-2" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "item-4" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "item-3"></label>
+              <input type = "radio" name = "carousel-item" id = "item-4" class = "carousel--bullet"/>
+              <div class = "carousel--item">
 
-          </article>
-        </section>
-        <section>
-          <input type = "radio" name = "sections" id = "other-projects">
-          <label for = "projects">Other Projects</label>
-          <article>
+                <div id = "calculator">
+                  <div class = "screen">
+                    <div class = "result">0</div>
+                  </div>
+                  <div id = "keypad">
+                    <ul id = "keys">
+                      <li id = "clear" class = "buttonTop">C</li>
+                      <li id = "del" class = "buttonTop">CE</li>
+                      <li id = "mod" class = "buttonTop">%</li>
+                      <li id = "divide" class = "button">&divide;</li>
+                      <li id = "7">7</li>
+                      <li id = "8">8</li>
+                      <li id = "9">9</li>
+                      <li id = "times" class = "button">&times;</li>
+                      <li id = "4">4</li>
+                      <li id = "5">5</li>
+                      <li id = "6">6</li>
+                      <li id = "minus" class = "button">&minus;</li>
+                      <li id = "1">1</li>
+                      <li id = "2">2</li>
+                      <li id = "3">3</li>
+                      <li id = "plus" class = "button">&plus;</li>
+                      <li id = "0" class = "extend">0</li>
+                      <li id = ".">&sdot;</li>
+                      <li id = "equal" class = "button">&#61;</li>
+                    </ul>
+                  </div>
+                </div>
 
-          </article>
-        </section>
-        <section>
-          <input type = "radio" name = "sections" id = "forms">
-          <label for = "forms">Forms</label>
-          <article>
-
-          </article>
-        </section>
-        <section>
-          <input type = "radio" name = "sections" id = "web-component">
-          <label for = "web-component">Web Component</label>
-          <article>
-
-          </article>
-        </section>
-        <section>
-          <input type = "radio" name = "sections" id = "cart">
-          <label for = "cart">Shopping Cart</label>
-          <article>
-
-          </article>
-        </section>
+                <label for = "item-3" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "item-1" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "item-4"></label>
+              <div class = "project-info">
+                <div class = "project-tech"><span>Technologies: </span>HTML5, CSS3, JavaScript</div>
+                <div class = "tech-description">Using HTML, Javascript & CSS3 to build a basic calculator!</div>
+                <div class = "links">
+                  <ul class = "wrapper__icons">
+                    <li><a target = "_blank" href = "http://hiepvo.github.io/calculator/"
+                           class = "wrapper__icon fa-rocket">Demo</a></li>
+                    <li><a target = "_blank" href = "https://github.com/hiepvo/calculator"
+                           class = "wrapper__icon fa-github">Source Code</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type = "radio" name = "sections" id = "component">
+            <label class = "tab-item" for = "component">Accordion Component</label>
+            <div id = "tabComponent" class = "carousel hide">
+              <input type = "radio" name = "carousel-ai" id = "ai-1" checked = "checked" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/acc1.png"/>
+                <label for = "ai-4" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "ai-2" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "ai-1"></label>
+              <input type = "radio" name = "carousel-ai" id = "ai-2" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/acc2.png"/>
+                <label for = "ai-1" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "ai-3" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "ai-2"></label>
+              <input type = "radio" name = "carousel-ai" id = "ai-3" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <span>Now, You can try the demo in next slide</span>
+                <label for = "ai-2" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "ai-4" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "ai-3"></label>
+              <input type = "radio" name = "carousel-ai" id = "ai-4" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <div class = "accordion">
+                  <ul>
+                    <li>
+                      <input type = "radio" id = "appetizers" name = "accordion-menu"><label for = "appetizers">Appetizers</label>
+                      <div class = "content">
+                        <h3>Check out our tasty apps</h3>
+                        <p>Happy hour menu - half off!!</p>
+                        <p>Chicken Wings (6) - 5.99$</p>
+                      </div>
+                    </li>
+                    <li>
+                      <input type = "radio" id = "entrees" name = "accordion-menu"><label
+                        for = "entrees">Entrees</label>
+                      <div class = "content">
+                        <p>Chicken Wings (6) - 5.99$</p>
+                        <p>Calamari - 7.99$</p>
+                      </div>
+                    </li>
+                    <li>
+                      <input type = "radio" id = "desserts" name = "accordion-menu"><label
+                        for = "desserts">Desserts</label>
+                      <div class = "content">
+                        <h3>New Summer Special!!</h3>
+                        <p>Turtle Caramel Shake - 7.99$</p>
+                      </div>
+                    </li>
+                    <li>
+                      <input type = "radio" id = "soups" name = "accordion-menu"><label for = "soups">Soups &
+                      Salads</label>
+                      <div class = "content">
+                        <h3>Do Not Miss This Special!!</h3>
+                        <p>Homemade Soup - 2.99$</p>
+                        <p>Tofu Miso Soup - 1.99$</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <label for = "ai-3" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "ai-1" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "ai-4"></label>
+              <div class = "project-info">
+                <div class = "project-tech"><span>Technologies: </span>HTML5, CSS3</div>
+                <div class = "tech-description">Using HTML & CSS3 to build a accordion menu component!</div>
+                <div class = "links">
+                  <ul class = "wrapper__icons">
+                    <li><a target = "_blank" href = "https://hiepvo.github.io/accordion-component/"
+                           class = "wrapper__icon fa-rocket">Demo</a></li>
+                    <li><a target = "_blank" href = "https://github.com/hiepvo/accordion-component"
+                           class = "wrapper__icon fa-github">Source Code</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type = "radio" name = "sections" id = "forms">
+            <label class = "tab-item" for = "forms">Forms</label>
+            <div id = "tabForms" class = "carousel hide">
+              <input type = "radio" name = "carousel-fi" id = "fi-1" checked = "checked" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/signup.png"/>
+                <label for = "fi-4" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "fi-2" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "fi-1"></label>
+              <input type = "radio" name = "carousel-fi" id = "fi-2" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/search.png"/>
+                <label for = "fi-1" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "fi-3" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "fi-2"></label>
+              <input type = "radio" name = "carousel-fi" id = "fi-3" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/questionair.png"/>
+                <label for = "fi-2" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "fi-4" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "fi-3"></label>
+              <input type = "radio" name = "carousel-fi" id = "fi-4" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/login.png"/>
+                <label for = "fi-3" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "fi-1" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "fi-4"></label>
+              <div class = "project-info">
+                <div class = "project-tech"><span>Technologies: </span>HTML5, CSS3</div>
+                <div class = "tech-description">Using HTML, CSS3 & Javascript to build some simple forms!</div>
+                <div class = "links">
+                  <ul class = "wrapper__icons">
+                    <li><a target = "_blank" href = "https://hiepvo.github.io/Forms-and-Inputs/"
+                           class = "wrapper__icon fa-rocket">Demo</a></li>
+                    <li><a target = "_blank" href = "https://github.com/hiepvo/Forms-and-Inputs"
+                           class = "wrapper__icon fa-github">Source Code</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type = "radio" name = "sections" id = "cart">
+            <label class = "tab-item" for = "cart">Shopping Cart</label>
+            <div id = "tabCart" class = "carousel hide">
+              <input type = "radio" name = "carousel-ci" id = "ci-1" checked = "checked" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/product.png"/>
+                <label for = "ci-4" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "ci-2" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "ci-1"></label>
+              <input type = "radio" name = "carousel-ci" id = "ci-2" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/cart1.png"/>
+                <label for = "ci-1" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "ci-3" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "ci-2"></label>
+              <input type = "radio" name = "carousel-ci" id = "ci-3" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/cart-header.png"/>
+                <label for = "ci-2" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "ci-4" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "ci-3"></label>
+              <input type = "radio" name = "carousel-ci" id = "ci-4" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/cart-header1.png"/>
+                <label for = "ci-3" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "ci-1" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "ci-4"></label>
+              <div class = "project-info">
+                <div class = "project-tech"><span>Technologies: </span>HTML5, CSS3</div>
+                <div class = "tech-description">Using HTML, CSS3 & Javascript to build some simple forms!</div>
+                <div class = "links">
+                  <ul class = "wrapper__icons">
+                    <li><a target = "_blank" href = "http://hiepvo.github.io/product-listing-page/"
+                           class = "wrapper__icon fa-rocket">Demo</a></li>
+                    <li><a target = "_blank" href = "https://github.com/hiepvo/product-listing-page"
+                           class = "wrapper__icon fa-github">Source Code</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </article>
@@ -107,32 +321,34 @@ ydyrdy
         </li>
         <li><h2>Skills</h2></li>
       </ul>
-      <div class="wrapper__progress">
-        <div class="wrapper__frontend">
+      <div class = "wrapper__progress">
+        <div class = "wrapper__frontend">
           <span>70%</span>
         </div>
-        <div class="wrapper__backend">
+        <div class = "wrapper__backend">
           <span>30%</span>
         </div>
       </div>
-      <div class="flex-row">
-        <div class="flex-col1">
+      <div class = "flex-row">
+        <div class = "flex-col1">
           <h3>Frontend Development</h3>
-          <div class="wrapper__graph">
-            <ul class="yAxis">
+          <div class = "wrapper__graph">
+            <ul class = "yAxis">
               <li>Expert</li>
               <li>Proficient</li>
               <li>Competent</li>
               <li>Learning</li>
             </ul>
-            <ul class="wrapper__graph-column">
-              <li class="col tooltip-top" id="fCol1" data-tooltip="Got experiences a couple years ago while working on .Net projects."></li>
-              <li class="col" id="fCol2" data-tooltip="Got experiences a couple years ago while working on .Net projects."></li>
-              <li class="col" id="fCol3" data-tooltip="Just about to learn React.js"></li>
-              <li class="col" id="fCol4" data-tooltip="Just about to learn Angular.js"></li>
-              <li class="col" id="fCol5" data-tooltip="Basic DOM manipulation and Ajax calls."></li>
+            <ul class = "wrapper__graph-column">
+              <li class = "col tooltip-top" id = "fCol1"
+                  data-tooltip = "Got experiences a couple years ago while working on .Net projects."></li>
+              <li class = "col" id = "fCol2"
+                  data-tooltip = "Got experiences a couple years ago while working on .Net projects."></li>
+              <li class = "col" id = "fCol3" data-tooltip = "Just about to learn React.js"></li>
+              <li class = "col" id = "fCol4" data-tooltip = "Just about to learn Angular.js"></li>
+              <li class = "col" id = "fCol5" data-tooltip = "Basic DOM manipulation and Ajax calls."></li>
             </ul>
-            <ul class="xAxis">
+            <ul class = "xAxis">
               <li>JavaScript</li>
               <li>HTML/CSS</li>
               <li>ReactJS</li>
@@ -141,23 +357,23 @@ ydyrdy
             </ul>
           </div>
         </div>
-        <div class="flex-col2">
+        <div class = "flex-col2">
           <h3>Backend Development</h3>
-          <div class="wrapper__graph">
-            <ul class="yAxis">
+          <div class = "wrapper__graph">
+            <ul class = "yAxis">
               <li>Expert</li>
               <li>Proficient</li>
               <li>Competent</li>
               <li>Learning</li>
             </ul>
-            <ul class="wrapper__graph-column">
-              <li class="col" id="bCol1" data-tooltip="Just about to learn Node.js"></li>
-              <li class="col" id="bCol2" data-tooltip="Self-teaching on PHP."></li>
-              <li class="col" id="bCol3" data-tooltip="Got some knowledge while self-teaching PHP."></li>
-              <li class="col" id="bCol4" data-tooltip="Just about to learn MongoDB."></li>
-              <li class="col" id="bCol5" data-tooltip="Have working experiences with APIs."></li>
+            <ul class = "wrapper__graph-column">
+              <li class = "col" id = "bCol1" data-tooltip = "Just about to learn Node.js"></li>
+              <li class = "col" id = "bCol2" data-tooltip = "Self-teaching on PHP."></li>
+              <li class = "col" id = "bCol3" data-tooltip = "Got some knowledge while self-teaching PHP."></li>
+              <li class = "col" id = "bCol4" data-tooltip = "Just about to learn MongoDB."></li>
+              <li class = "col" id = "bCol5" data-tooltip = "Have working experiences with APIs."></li>
             </ul>
-            <ul class="xAxis">
+            <ul class = "xAxis">
               <li>Node.js</li>
               <li>PHP</li>
               <li>MySQL</li>
@@ -166,23 +382,23 @@ ydyrdy
             </ul>
           </div>
         </div>
-        <div class="flex-col3">
+        <div class = "flex-col3">
           <h3>Other Skills</h3>
-          <div class="wrapper__graph">
-            <ul class="yAxis">
+          <div class = "wrapper__graph">
+            <ul class = "yAxis">
               <li>Expert</li>
               <li>Proficient</li>
               <li>Competent</li>
               <li>Learning</li>
             </ul>
-            <ul class="wrapper__graph-column">
-              <li class="col" id="os1" data-tooltip="Written some articles."></li>
-              <li class="col" id="os2" data-tooltip="Focus on the solution – not the problem."></li>
-              <li class="col" id="os3" data-tooltip="Knowing communication is important."></li>
-              <li class="col" id="os4" data-tooltip="Knowing how to ask question to discover new knowledge."></li>
-              <li class="col" id="os5" data-tooltip="Only with classmates."></li>
+            <ul class = "wrapper__graph-column">
+              <li class = "col" id = "os1" data-tooltip = "Written some articles."></li>
+              <li class = "col" id = "os2" data-tooltip = "Focus on the solution – not the problem."></li>
+              <li class = "col" id = "os3" data-tooltip = "Knowing communication is important."></li>
+              <li class = "col" id = "os4" data-tooltip = "Knowing how to ask question to discover new knowledge."></li>
+              <li class = "col" id = "os5" data-tooltip = "Only with classmates."></li>
             </ul>
-            <ul class="xAxis">
+            <ul class = "xAxis">
               <li>Written Communication</li>
               <li>Problem Solving</li>
               <li>Project Management</li>
@@ -203,7 +419,7 @@ ydyrdy
       </ul>
       <header><h2>About</h2>
       </header>
-      <label id="bizCard">
+      <label id = "bizCard">
         <input type = "checkbox" id = "flip-card" name = "flip-card">
         <div class = "card">
           <div class = "front">
@@ -213,16 +429,17 @@ ydyrdy
             </header>
             <img id = "flip-front" src = "images/flip-icon.svg" alt = "">
             <div class = "main">
-              <p>Hiep is an aspiring Fullstack Developer, learning at <span>Bov</span> Academy of<span> Programming and Futuristic Engineering</span> . He is determined & diligent to work his way up to become Exceptional Web Programmer.</p>
+              <p>Hiep is an aspiring Fullstack Developer, learning at <span>Bov</span> Academy of<span> Programming and Futuristic Engineering</span>
+                . He is determined & diligent to work his way up to become Exceptional Web Programmer.</p>
               <a href = "#">Email</a><a href = "#">Portfolios</a>
             </div>
             <footer>
-              <div class="leftCol"><a href = ""><img src = "images/enc2.png" alt = ""></a><span> Hiep Vo  <br> on <a
-                href = "#">Encyclopedia.MD</a></span></div>
+              <div class = "leftCol"><a href = ""><img src = "images/enc2.png" alt = ""></a><span> Hiep Vo  <br> on <a
+                  href = "#">Encyclopedia.MD</a></span></div>
               <div class = "icons">
                 <a href = "#" class = "wrapper__icon fa-twitter"></a>
                 <a href = "#" class = "wrapper__icon fa-github"></a>
-                <a href = "https://www.linkedin.com/in/hiep-vo-0867b143" class="wrapper__icon fa-linkedin"></a>
+                <a href = "https://www.linkedin.com/in/hiep-vo-0867b143" class = "wrapper__icon fa-linkedin"></a>
               </div>
             </footer>
           </div>
@@ -274,5 +491,7 @@ ydyrdy
   </div>
 </div>
 <script src = "main.js"></script>
+<script src = "calculator.js"></script>
+<script src = "validator.js"></script>
 </body>
 </html>
