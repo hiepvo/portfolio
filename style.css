@@ -271,10 +271,8 @@ article#home {
 
 }
 
-#home .wrapper__image,
-#about .wrapper__image,
-#contact .wrapper__image {
-  background: #3E606F url("images/pic") no-repeat center;
+#home .wrapper__image {
+  background: #E8E7E5 url("images/pic01.JPG") no-repeat center;
   background-size: cover;
 }
 
@@ -333,10 +331,13 @@ article#projects, article#skills, article#about, article#contact{
   min-height: 62rem;
 }
 
-#home .wrapper__image,
-#about .wrapper__image,
+#about .wrapper__image {
+  background: #E8E7E5 url("images/pic02.JPG") no-repeat center;
+  background-size: cover;
+}
+
 #contact .wrapper__image {
-  background: #3E606F url("images/pic") no-repeat center;
+  background: #E8E7E5 url("images/pic04.JPG") no-repeat center;
   background-size: cover;
 }
 
