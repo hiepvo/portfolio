@@ -922,8 +922,8 @@ form .field {
   opacity: 1;
   position: absolute;
   top: 0;
-  transition: opacity 0.2s ease 0s;
   width: 2rem;
+  z-index: -1;
 }
 
 .wrapper__back::after {
@@ -938,9 +938,9 @@ form .field {
   opacity: 0;
   position: absolute;
   top: 0;
-  transition: opacity 0.2s ease 0s;
   vertical-align: middle;
   width: 2rem;
+  z-index: -1;
 }
 
 .wrapper__back:hover::before {
