@@ -295,20 +295,6 @@ article#projects, article#skills, article#about, article#contact {
 
 }
 
-/*
-article#projects, article#skills, article#about, article#contact{
-
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
-
-  -webkit-transition-delay: 0.3s;
-  -moz-transition-delay: 0.3s;
-  -ms-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-}
-*/
 /*----------------------------*/
 
 .wrapper {
@@ -474,10 +460,15 @@ input#back-home-projects:checked ~ #projects {
   display: inline-block;
   font-size: 1.6rem;
   vertical-align: middle;
-  width: 20rem;
+  width: 12rem;
 }
 
-/*-------------projects tabs----------*/
+#projects ul.wrapper__buttons--spinX li:nth-of-type(2) h2,
+#skills ul.wrapper__buttons--spinX li:nth-of-type(2) h2 {
+  padding-left: 10rem;
+}
+
+
 /*------------- graph ----------------*/
 .skills {
   text-align: center;
@@ -913,7 +904,7 @@ form .field {
 #about ul li,
 #contact ul li {
   display: inline-block;
-  width: 20rem;
+  width: 12rem;
   vertical-align: middle;
   font-size: 1.6rem;
 }
@@ -1501,6 +1492,12 @@ input[type="checkbox"] {
     margin: 0;
     padding-right: 0;
   }
+
+  #projects ul.wrapper__buttons--spinX li:nth-of-type(2) h2,
+  #skills ul.wrapper__buttons--spinX li:nth-of-type(2) h2 {
+    padding-left: 0;
+  }
+
 
   #projects .tabs {
     width: 100%;
