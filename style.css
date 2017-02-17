@@ -1453,6 +1453,12 @@ input[type="checkbox"] {
     width: 95%;
     padding: 0;
   }
+  #projects ul.wrapper__buttons--spinX li:nth-of-type(2) h2,
+  #skills ul.wrapper__buttons--spinX li:nth-of-type(2) h2 {
+    padding-left: 0;
+  }
+
+
 
   .tabs ul li {
     width: 100%;
