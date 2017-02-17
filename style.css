@@ -1078,63 +1078,6 @@ input#back-home-contact:checked ~ #home {
     transform: translate(0);
   }
 }
-
-/*-----spinX for back button -------*/
-@-moz-keyframes spinX {
-  from {
-    -moz-transform: rotateX(0deg);
-  }
-  to {
-    -moz-transform: rotateX(-480deg);
-  }
-}
-
-@-webkit-keyframes spinX {
-  from {
-    -webkit-transform: rotateX(0deg);
-  }
-  to {
-    -webkit-transform: rotateX(-480deg);
-  }
-}
-
-@keyframes spinX {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(-480deg);
-  }
-}
-
-/*------ spinY for home button---------*/
-@-moz-keyframes spinY {
-  from {
-    -moz-transform: rotateY(0deg);
-  }
-  to {
-    -moz-transform: rotateY(480deg);
-  }
-}
-
-@-webkit-keyframes spinY {
-  from {
-    -webkit-transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(480deg);
-  }
-}
-
-@keyframes spinY {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(480deg);
-  }
-}
-
 /*--------------Business Card---------*/
 
 #about .wrapper__content label#bizCard {
