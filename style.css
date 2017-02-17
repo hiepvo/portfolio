@@ -1350,8 +1350,12 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 736px) {
+  #home .wrapper__image {
+    min-height: 50rem;
+    max-height: 30vh;
+  }
 
-  #email, form div:nth-of-type(2) label {
+  form div:nth-of-type(2) label {
     margin: 0;
   }
 
@@ -1397,7 +1401,7 @@ input[type="checkbox"] {
   }
 
   .wrapper__panel > .wrapper__image {
-    min-height: 50vh;
+    min-height: 60rem;
     width: 100%;
   }
 
