@@ -179,16 +179,6 @@ ul.wrapper__buttons--spinY li label {
   transition: transform 0.7s 0s;
 }
 
-/* click on buttons on home page it'll be spin */
-ul.wrapper__buttons--spinY li:focus > label {
-  transform: rotateY(480deg);
-}
-
-/* spin action for back button */
-ul.wrapper__buttons--spinX li:focus > label {
-  transform: rotateX(480deg);
-}
-
 .wrapper__vline li::after {
   background-color: #3E606F;
   content: "";
@@ -225,7 +215,7 @@ ul.wrapper__buttons--spinX li:focus > label {
 .wrapper__button--small {
   font-size: 1.2rem;
   width: 12rem;
-  padding: 0.2rem 5rem;
+  padding: 0 5rem;
 }
 
 /*set color & border for button when hover */
@@ -373,6 +363,21 @@ input#article-contact:checked ~ #contact {
 
 }
 
+/* ---- spin for button in main page ---*/
+input#article-projects:checked ~ #home ul.wrapper__buttons--spinY li:focus > label,
+input#article-skills:checked ~ #home ul.wrapper__buttons--spinY li:focus > label,
+input#article-contact:checked ~ #home ul.wrapper__buttons--spinY li:focus > label,
+input#article-about:checked ~ #home ul.wrapper__buttons--spinY li:focus > label{
+  transform: rotateY(360deg);
+}
+/* ---- spin for back button --- */
+input#back-home-projects:checked ~ #projects ul.wrapper__buttons--spinX li:focus > label,
+input#back-home-skills:checked ~ #skills ul.wrapper__buttons--spinX li:focus > label,
+input#back-home-contact:checked ~ #contact ul.wrapper__buttons--spinX li:focus > label,
+input#back-home-about:checked ~ #about ul.wrapper__buttons--spinX li:focus > label {
+  transform: rotateX(360deg);
+}
+
 input#article-projects:checked ~ #home,
 input#article-skills:checked ~ #home,
 input#article-about:checked ~ #home,
@@ -467,7 +472,6 @@ input#back-home-projects:checked ~ #projects {
 #skills ul.wrapper__buttons--spinX li:nth-of-type(2) h2 {
   padding-left: 10rem;
 }
-
 
 /*------------- graph ----------------*/
 .skills {
@@ -1497,7 +1501,6 @@ input[type="checkbox"] {
   #skills ul.wrapper__buttons--spinX li:nth-of-type(2) h2 {
     padding-left: 0;
   }
-
 
   #projects .tabs {
     width: 100%;
