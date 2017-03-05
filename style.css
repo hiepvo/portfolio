@@ -375,7 +375,7 @@ input#back-home-projects:checked ~ #projects ul.wrapper__buttons--spinX li:focus
 input#back-home-skills:checked ~ #skills ul.wrapper__buttons--spinX li:focus > label,
 input#back-home-contact:checked ~ #contact ul.wrapper__buttons--spinX li:focus > label,
 input#back-home-about:checked ~ #about ul.wrapper__buttons--spinX li:focus > label {
-  transform: rotateX(360deg);
+  transform: rotateX(480deg);
 }
 
 input#article-projects:checked ~ #home,
