@@ -1274,6 +1274,12 @@ input[type="checkbox"] {
   display: inline-flex;
 }
 
+#tabComponent .carousel--item img{
+  width: 45rem;
+  height: 35rem;
+  background-size: cover;
+}
+
 /*------------media queries----------*/
 
 @media screen and (max-width: 320px) {
