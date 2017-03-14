@@ -26,14 +26,20 @@
   var popupClick    = document.getElementById('popupClick');
   var popup1        = document.getElementById('popup1');
 
-  var calc          = document.getElementById('calc');
-  var component     = document.getElementById('component');
-  var forms         = document.getElementById('forms');
-  var cart  = document.getElementById('cart');
+  var calc         = document.getElementById('calc');
+  var component    = document.getElementById('component');
+  var ui_component = document.getElementById('ui-component');
+  var forms        = document.getElementById('forms');
+  var cart         = document.getElementById('cart');
+  var others = document.getElementById('others');
 
-  var tabCalc          = document.getElementById('tabCalc');
-  var tabComponent     = document.getElementById('tabComponent');
-  var tabForms         = document.getElementById('tabForms');
+  var tabCalc         = document.getElementById('tabCalc');
+  var tabComponent    = document.getElementById('tabComponent');
+  var ui_tabComponent = document.getElementById('ui-tabComponent');
+  var tabOthers = document.getElementById('tabOthers');
+
+
+  var tabForms = document.getElementById('tabForms');
   var tabCart  = document.getElementById('tabCart');
 
   var transitionEnd = transitionEndEventName();
@@ -41,26 +47,52 @@
   calc.addEventListener('click', function(){
     show(tabCalc, 0);
     hide(tabComponent, 500);
+    hide(ui_tabComponent, 500);
     hide(tabForms, 500);
     hide(tabCart, 500);
+    hide(tabOthers, 500);
   });
 
   component.addEventListener('click', function(){
     show(tabComponent, 0);
+    hide(ui_tabComponent, 500);
     hide(tabCalc, 500);
     hide(tabForms, 500);
     hide(tabCart, 500);
+    hide(tabOthers, 500);
+  });
+
+  ui_component.addEventListener('click', function(){
+    show(ui_tabComponent, 0);
+    hide(tabComponent, 500);
+    hide(tabCalc, 500);
+    hide(tabForms, 500);
+    hide(tabCart, 500);
+    hide(tabOthers, 500);
   });
 
   forms.addEventListener('click', function(){
     show(tabForms, 0);
+    hide(ui_tabComponent, 500);
     hide(tabComponent, 500);
     hide(tabCalc, 500);
     hide(tabCart, 500);
+    hide(tabOthers, 500);
   });
 
   cart.addEventListener('click', function(){
     show(tabCart, 0);
+    hide(ui_tabComponent, 500);
+    hide(tabComponent, 500);
+    hide(tabCalc, 500);
+    hide(tabForms, 500);
+    hide(tabOthers, 500);
+  });
+
+  others.addEventListener('click', function(){
+    show(tabOthers, 0);
+    hide(tabCart, 500);
+    hide(ui_tabComponent, 500);
     hide(tabComponent, 500);
     hide(tabCalc, 500);
     hide(tabForms, 500);
@@ -199,8 +231,8 @@
   }
 
   function removeClass(el, className){
-    if(el.classList)
-      el.classList.remove(className);
+    if(el.classList){
+      el.classList.remove(className);}
     else if(hasClass(el, className)){
       var reg      = new RegExp('(\\s|^)' + className + '(\\s|$)');
       el.className = el.className.replace(reg, ' ')

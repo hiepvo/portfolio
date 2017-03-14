@@ -32,7 +32,6 @@ header {
   margin: 2rem 1.5rem;
 }
 
-
 h1 {
   color: #2C3E50;
   font-family: "roboto_slablight", sans-serif;
@@ -64,12 +63,10 @@ header p {
   line-height: 2.8rem;
 }
 
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 
 a:hover {
   border-bottom-color: transparent;
@@ -107,7 +104,6 @@ ul.wrapper__icons li {
   font-weight: normal;
   text-transform: none;
 }
-
 
 .wrapper__icon > .wrapper__label {
   display: none;
@@ -300,7 +296,6 @@ article#projects, article#skills, article#about, article#contact {
   opacity: 0;
 }
 
-
 input#article-projects:checked ~ #projects,
 input#article-skills:checked ~ #skills,
 input#article-about:checked ~ #about,
@@ -318,7 +313,6 @@ input#article-contact:checked ~ #contact {
   opacity: 1;
   z-index: 1;
 }
-
 
 input#article-projects:checked ~ #home,
 input#article-skills:checked ~ #home,
@@ -378,14 +372,14 @@ input#back-home-contact:checked ~ #contact .wrapper__content {
   transition: transform 0.7s, opacity 0.7s;
 }
 
-
 /* ---- spin for button in main page ---*/
 input#article-projects:checked ~ #home ul.wrapper__buttons--spinY li:focus > label,
 input#article-skills:checked ~ #home ul.wrapper__buttons--spinY li:focus > label,
 input#article-contact:checked ~ #home ul.wrapper__buttons--spinY li:focus > label,
-input#article-about:checked ~ #home ul.wrapper__buttons--spinY li:focus > label{
+input#article-about:checked ~ #home ul.wrapper__buttons--spinY li:focus > label {
   transform: rotateY(360deg);
 }
+
 /* ---- spin for back button --- */
 input#back-home-projects:checked ~ #projects ul.wrapper__buttons--spinX li:focus > label,
 input#back-home-skills:checked ~ #skills ul.wrapper__buttons--spinX li:focus > label,
@@ -393,7 +387,6 @@ input#back-home-contact:checked ~ #contact ul.wrapper__buttons--spinX li:focus >
 input#back-home-about:checked ~ #about ul.wrapper__buttons--spinX li:focus > label {
   transform: rotateX(480deg);
 }
-
 
 /*--------style for wrapper----------------*/
 .wrapper {
@@ -425,7 +418,6 @@ input#back-home-about:checked ~ #about ul.wrapper__buttons--spinX li:focus > lab
 .wrapper__panel > .wrapper__image {
   width: 45%;
 }
-
 
 /*----------- Skills ----------*/
 
@@ -695,7 +687,6 @@ input#back-home-projects:checked ~ #projects {
   height: 20%;
 }
 
-
 /*--------- Tooltip ---------*/
 [data-tooltip] {
   cursor: pointer;
@@ -756,7 +747,6 @@ input#back-home-projects:checked ~ #projects {
   opacity: 1;
 }
 
-
 /*--------------Tab Accordion------------------*/
 .tabs {
   color: #333;
@@ -804,9 +794,11 @@ input#back-home-projects:checked ~ #projects {
 
 .tabs #calc:checked ~ .carousel,
 .tabs #component:checked ~ .carousel,
+.tabs #ui-component:checked ~ .carousel,
 .tabs #image-gallery:checked ~ .carousel,
 .tabs #forms:checked ~ .carousel,
-.tabs #cart:checked ~ .carousel {
+.tabs #cart:checked ~ .carousel,
+.tabs #others:checked ~ .carousel {
   opacity: 1;
 }
 
@@ -1018,6 +1010,7 @@ input#back-home-contact:checked ~ #home {
     transform: translate(0);
   }
 }
+
 /*--------------Business Card---------*/
 
 #about .wrapper__content label#bizCard {
@@ -1202,8 +1195,11 @@ input#back-home-contact:checked ~ #home {
   display: inline-flex;
 }
 
-#tabComponent .carousel--item img{
+.carousel--item img {
   background-size: cover;
+}
+
+#ui-tabComponent .carousel--item img, #tabOthers .carousel--item img{
   height: 35rem;
   width: 45rem;
 }
@@ -1386,6 +1382,7 @@ input#back-home-contact:checked ~ #home {
     padding: 0;
     width: 95%;
   }
+
   #projects ul.wrapper__buttons--spinX li:nth-of-type(2) h2,
   #skills ul.wrapper__buttons--spinX li:nth-of-type(2) h2 {
     padding-left: 0;

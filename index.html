@@ -59,9 +59,55 @@
       <div class = "tabs">
         <ul>
           <li>
-            <input type = "radio" name = "sections" id = "calc" checked = "checked">
+            <input type = "radio" name = "sections" id = "ui-component" checked = "checked">
+            <label class = "tab-item" for = "ui-component">UI Components</label>
+            <div id = "ui-tabComponent" class = "carousel">
+              <input type = "radio" name = "carousel-uic" id = "uic-1" checked = "checked" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/btn1.png"/>
+                <label for = "uic-4" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "uic-2" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "uic-1"></label>
+              <input type = "radio" name = "carousel-uic" id = "uic-2" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/btn3.png"/>
+                <label for = "uic-1" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "uic-3" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "uic-2"></label>
+              <input type = "radio" name = "carousel-uic" id = "uic-3" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/btn4.png"/>
+                <label for = "uic-2" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "uic-4" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "uic-3"></label>
+              <input type = "radio" name = "carousel-uic" id = "uic-4" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/carousel.png"/>
+                <label for = "uic-3" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "uic-1" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "uic-4"></label>
+              <div class = "project-info">
+                <div class = "project-tech"><span>Technologies: </span>HTML5, CSS3</div>
+                <div class = "tech-description">Using HTML & CSS3 to build a accordion menu component!</div>
+                <div class = "links">
+                  <ul class = "wrapper__icons">
+                    <li><a target = "_blank" href = "https://hiepvo.github.io/components/"
+                           class = "wrapper__icon fa-rocket">Demo</a></li>
+                    <li><a target = "_blank" href = "https://github.com/hiepvo/components/"
+                           class = "wrapper__icon fa-github">Source Code</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type = "radio" name = "sections" id = "calc">
             <label class = "tab-item" for = "calc">Real Calculator</label>
-            <div id = "tabCalc" class = "carousel">
+            <div id = "tabCalc" class = "carousel hide">
               <input type = "radio" name = "carousel-item" id = "item-1" checked = "checked"
                      class = "carousel--bullet"/>
               <div class = "carousel--item">
@@ -136,32 +182,68 @@
           </li>
           <li>
             <input type = "radio" name = "sections" id = "component">
-            <label class = "tab-item" for = "component">UI Components</label>
+            <label class = "tab-item" for = "component">Accordion Component</label>
             <div id = "tabComponent" class = "carousel hide">
               <input type = "radio" name = "carousel-ai" id = "ai-1" checked = "checked" class = "carousel--bullet"/>
               <div class = "carousel--item">
-                <img src = "images/btn1.png"/>
+                <img src = "images/acc1.png"/>
                 <label for = "ai-4" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
                 <label for = "ai-2" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
               </div>
               <label class = "carousel--bullet" for = "ai-1"></label>
               <input type = "radio" name = "carousel-ai" id = "ai-2" class = "carousel--bullet"/>
               <div class = "carousel--item">
-                <img src = "images/btn3.png"/>
+                <img src = "images/acc2.png"/>
                 <label for = "ai-1" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
                 <label for = "ai-3" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
               </div>
               <label class = "carousel--bullet" for = "ai-2"></label>
               <input type = "radio" name = "carousel-ai" id = "ai-3" class = "carousel--bullet"/>
               <div class = "carousel--item">
-                <img src = "images/btn4.png"/>
+                <span>Now, You can try the demo in next slide</span>
                 <label for = "ai-2" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
                 <label for = "ai-4" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
               </div>
               <label class = "carousel--bullet" for = "ai-3"></label>
               <input type = "radio" name = "carousel-ai" id = "ai-4" class = "carousel--bullet"/>
               <div class = "carousel--item">
-                <img src = "images/carousel.png"/>
+                <div class = "accordion">
+                  <ul>
+                    <li>
+                      <input type = "radio" id = "appetizers" name = "accordion-menu"><label for = "appetizers">Appetizers</label>
+                      <div class = "content">
+                        <h3>Check out our tasty apps</h3>
+                        <p>Happy hour menu - half off!!</p>
+                        <p>Chicken Wings (6) - 5.99$</p>
+                      </div>
+                    </li>
+                    <li>
+                      <input type = "radio" id = "entrees" name = "accordion-menu"><label
+                        for = "entrees">Entrees</label>
+                      <div class = "content">
+                        <p>Chicken Wings (6) - 5.99$</p>
+                        <p>Calamari - 7.99$</p>
+                      </div>
+                    </li>
+                    <li>
+                      <input type = "radio" id = "desserts" name = "accordion-menu"><label
+                        for = "desserts">Desserts</label>
+                      <div class = "content">
+                        <h3>New Summer Special!!</h3>
+                        <p>Turtle Caramel Shake - 7.99$</p>
+                      </div>
+                    </li>
+                    <li>
+                      <input type = "radio" id = "soups" name = "accordion-menu"><label for = "soups">Soups &
+                      Salads</label>
+                      <div class = "content">
+                        <h3>Do Not Miss This Special!!</h3>
+                        <p>Homemade Soup - 2.99$</p>
+                        <p>Tofu Miso Soup - 1.99$</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
                 <label for = "ai-3" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
                 <label for = "ai-1" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
               </div>
@@ -171,9 +253,9 @@
                 <div class = "tech-description">Using HTML & CSS3 to build a accordion menu component!</div>
                 <div class = "links">
                   <ul class = "wrapper__icons">
-                    <li><a target = "_blank" href = "https://hiepvo.github.io/components/"
+                    <li><a target = "_blank" href = "https://hiepvo.github.io/accordion-component/"
                            class = "wrapper__icon fa-rocket">Demo</a></li>
-                    <li><a target = "_blank" href = "https://github.com/hiepvo/components/"
+                    <li><a target = "_blank" href = "https://github.com/hiepvo/accordion-component"
                            class = "wrapper__icon fa-github">Source Code</a></li>
                   </ul>
                 </div>
@@ -266,6 +348,52 @@
                     <li><a target = "_blank" href = "http://hiepvo.github.io/product-listing-page/"
                            class = "wrapper__icon fa-rocket">Demo</a></li>
                     <li><a target = "_blank" href = "https://github.com/hiepvo/product-listing-page"
+                           class = "wrapper__icon fa-github">Source Code</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type = "radio" name = "sections" id = "others">
+            <label class = "tab-item" for = "others">Other Projects</label>
+            <div id = "tabOthers" class = "carousel hide">
+              <input type = "radio" name = "carousel-o" id = "o-1" checked = "checked" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/colla1.png"/>
+                <label for = "o-4" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "o-2" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "o-1"></label>
+              <input type = "radio" name = "carousel-o" id = "o-2" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/colla2.png"/>
+                <label for = "o-1" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "o-3" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "o-2"></label>
+              <input type = "radio" name = "carousel-o" id = "o-3" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/colla3.png"/>
+                <label for = "o-2" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "o-4" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "o-3"></label>
+              <input type = "radio" name = "carousel-o" id = "o-4" class = "carousel--bullet"/>
+              <div class = "carousel--item">
+                <img src = "images/colla4.png"/>
+                <label for = "o-3" class = "carousel--nav carousel--nav-previous fa fa-arrow-left"></label>
+                <label for = "o-1" class = "carousel--nav carousel--nav-next fa fa-arrow-right"></label>
+              </div>
+              <label class = "carousel--bullet" for = "o-4"></label>
+              <div class = "project-info">
+                <div class = "project-tech"><span>Technologies: </span>HTML5, CSS3</div>
+                <div class = "tech-description">Using HTML & CSS3 to build a accordion menu component!</div>
+                <div class = "links">
+                  <ul class = "wrapper__icons">
+                    <li><a target = "_blank" href = "https://hiepvo.github.io/collaboration.modern-developer/"
+                           class = "wrapper__icon fa-rocket">Demo</a></li>
+                    <li><a target = "_blank" href = "https://github.com/hiepvo/collaboration.modern-developer/"
                            class = "wrapper__icon fa-github">Source Code</a></li>
                   </ul>
                 </div>
