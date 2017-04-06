@@ -10,16 +10,19 @@
   var skills   = document.getElementById('skills');
   var about    = document.getElementById('about');
   var contact  = document.getElementById('contact');
+  var thesis = document.getElementById('thesis');
 
   var inputProject = document.getElementById('article-projects');
   var inputSkills  = document.getElementById('article-skills');
   var inputAbout   = document.getElementById('article-about');
   var inputContact = document.getElementById('article-contact');
+  var inputThesis = document.getElementById('article-thesis');
 
   var backHome_projects = document.getElementById('back-home-projects');
   var backHome_skills   = document.getElementById('back-home-skills');
   var backHome_contact  = document.getElementById('back-home-contact');
   var backHome_about    = document.getElementById('back-home-about');
+  var backHome_thesis    = document.getElementById('back-home-thesis');
 
   var search        = document.getElementById('search');
   var searchOverlay = document.getElementById('overlay');
@@ -132,6 +135,11 @@
         ShowHome, false);
   });
 
+  backHome_thesis.addEventListener('click', function(){
+    document.addEventListener(transitionEnd,
+        ShowHome, false);
+  });
+
   inputProject.addEventListener('click', function(){
     document.addEventListener(transitionEnd,
         ShowProjects, false);
@@ -151,6 +159,18 @@
     document.addEventListener(transitionEnd,
         ShowAbout, false);
   });
+
+  inputThesis.addEventListener('click', function(){
+    document.addEventListener(transitionEnd,
+        ShowThesis, false);
+  });
+
+  var ShowThesis = function(){
+    document.removeEventListener(transitionEnd, ShowThesis);
+    show(thesis, 500);
+    hide(home, 500);
+  };
+
 
   var ShowProjects = function(){
     document.removeEventListener(transitionEnd, ShowProjects);
@@ -185,6 +205,7 @@
     hide(projects, 500);
     hide(contact, 500);
     hide(about, 500);
+    hide(thesis, 500);
   };
 
   function hide(el, time){
