@@ -248,7 +248,7 @@ article#home {
 }
 
 #home .wrapper__image {
-  background: #E8E7E5 url("images/home-pic.jpg") no-repeat center;
+  background: #E8E7E5 url("http://placeimg.com/545/620/tech") no-repeat center;
   background-size: cover;
 }
 
@@ -272,12 +272,12 @@ article#projects, article#skills, article#about, article#contact, article#thesis
 }
 
 #about .wrapper__image {
-  background: #E8E7E5 url("images/pic02.JPG") no-repeat center;
+  background: #E8E7E5 url("http://placeimg.com/545/620/tech") no-repeat center;
   background-size: cover;
 }
 
 #contact .wrapper__image {
-  background: #E8E7E5 url("images/pic04.JPG") no-repeat center;
+  background: #E8E7E5 url("http://placeimg.com/545/620/tech") no-repeat center;
   background-size: cover;
 }
 
