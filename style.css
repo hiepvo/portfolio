@@ -804,6 +804,7 @@ input#back-home-thesis:checked ~ #thesis{
 .tabs #calc:checked ~ .carousel,
 .tabs #component:checked ~ .carousel,
 .tabs #ui-component:checked ~ .carousel,
+.tabs #ui-galleries:checked ~ .carousel,
 .tabs #image-gallery:checked ~ .carousel,
 .tabs #forms:checked ~ .carousel,
 .tabs #cart:checked ~ .carousel,
@@ -1207,12 +1208,26 @@ input#back-home-thesis:checked ~ #home{
 
 .carousel--item img {
   background-size: cover;
+  width: 55rem;
 }
 
-#ui-tabComponent .carousel--item img, #tabOthers .carousel--item img{
+#ui-tabComponent .carousel--item img,
+#tabOthers .carousel--item img ,
+#tabCart .carousel--item img{
   height: 35rem;
   width: 45rem;
 }
+
+#tabComponent .carousel--item img{
+  height: 35rem;
+  width: 40rem;
+}
+
+#tabCalc .carousel--item img{
+  height: 35rem;
+  width: 25rem;
+}
+
 
 /*------------media queries----------*/
 

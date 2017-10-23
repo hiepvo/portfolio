@@ -32,17 +32,17 @@
   var calc         = document.getElementById('calc');
   var component    = document.getElementById('component');
   var ui_component = document.getElementById('ui-component');
-  var forms        = document.getElementById('forms');
+  var ui_galleries = document.getElementById('ui-galleries');
+
   var cart         = document.getElementById('cart');
   var others = document.getElementById('others');
 
   var tabCalc         = document.getElementById('tabCalc');
   var tabComponent    = document.getElementById('tabComponent');
   var ui_tabComponent = document.getElementById('ui-tabComponent');
+  var ui_tabGalleries = document.getElementById('ui-tabGalleries');
   var tabOthers = document.getElementById('tabOthers');
 
-
-  var tabForms = document.getElementById('tabForms');
   var tabCart  = document.getElementById('tabCart');
 
   var transitionEnd = transitionEndEventName();
@@ -51,7 +51,7 @@
     show(tabCalc, 0);
     hide(tabComponent, 500);
     hide(ui_tabComponent, 500);
-    hide(tabForms, 500);
+    hide(ui_tabGalleries, 500);
     hide(tabCart, 500);
     hide(tabOthers, 500);
   });
@@ -59,8 +59,8 @@
   component.addEventListener('click', function(){
     show(tabComponent, 0);
     hide(ui_tabComponent, 500);
+    hide(ui_tabGalleries, 500);
     hide(tabCalc, 500);
-    hide(tabForms, 500);
     hide(tabCart, 500);
     hide(tabOthers, 500);
   });
@@ -68,37 +68,37 @@
   ui_component.addEventListener('click', function(){
     show(ui_tabComponent, 0);
     hide(tabComponent, 500);
+    hide(ui_tabGalleries, 500);
     hide(tabCalc, 500);
-    hide(tabForms, 500);
     hide(tabCart, 500);
     hide(tabOthers, 500);
   });
 
-  forms.addEventListener('click', function(){
-    show(tabForms, 0);
-    hide(ui_tabComponent, 500);
+  ui_galleries.addEventListener('click', function(){
+    show(ui_tabGalleries, 0);
+    hide(ui_tabComponent, 5000);
     hide(tabComponent, 500);
     hide(tabCalc, 500);
+    //hide(tabForms, 500);
     hide(tabCart, 500);
     hide(tabOthers, 500);
   });
-
   cart.addEventListener('click', function(){
     show(tabCart, 0);
     hide(ui_tabComponent, 500);
+    hide(ui_tabGalleries, 500);
     hide(tabComponent, 500);
     hide(tabCalc, 500);
-    hide(tabForms, 500);
     hide(tabOthers, 500);
   });
 
   others.addEventListener('click', function(){
     show(tabOthers, 0);
     hide(tabCart, 500);
+    hide(ui_tabGalleries, 500);
     hide(ui_tabComponent, 500);
     hide(tabComponent, 500);
     hide(tabCalc, 500);
-    hide(tabForms, 500);
   });
 
   search.addEventListener('click', function(event){
